@@ -14,7 +14,7 @@ export const purchaseFilter = {
         mask: currencyFormatter,
         type: "text",
     },
-    'max_discount': final_date
+    'max_discount': {
         label: "Valor Máximo de Desconto",
         mask: currencyFormatter,
         type: "text",
