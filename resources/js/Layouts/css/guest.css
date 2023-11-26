@@ -1,0 +1,9 @@
+.guestBackground {
+    background-image: url("/images/background.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.applicationLogo {
+    width: 100px;
+}
