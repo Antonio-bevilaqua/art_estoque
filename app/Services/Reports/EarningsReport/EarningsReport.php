@@ -8,13 +8,14 @@ use App\Services\Reports\Report;
 use App\Services\Reports\Requests\ReportRequest;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\Auth;
 
 class EarningsReport extends Report
 {
     public function get(ReportRequest $request): array
     {
-        $purchases = $this->build($request, Purchase::query());
-        $sellings = $this->build($request, Selling::query());
+        $purchases = $this->build($request, Purchase::where('user_id', Auth::user()->id));
+        $sellings = $this->build($request, Selling::where('user_id', Auth::user()->id));
         return [
             'purchases' => $purchases,
             'sales' => $sellings,
