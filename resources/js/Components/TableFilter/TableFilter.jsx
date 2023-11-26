@@ -38,9 +38,7 @@ function TableFilter({request, inputs, routeName, buttonClassName = "", mappers 
 
     const clearFilterArrayValue = (key, value) => {
         let newData = {...request};
-        console.log(key, value);
         newData[key] = newData[key].filter((val) => val !== value);
-        console.log(newData);
         router.get(route(routeName), newData);
     };
 

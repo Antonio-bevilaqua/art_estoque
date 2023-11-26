@@ -3,11 +3,7 @@ import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import TextInput from '@/Components/TextInput';
 import {useForm} from '@inertiajs/react';
-import {currencyFormatter, integerFormatter} from "@/utils/functions";
-import FileInput from "@/Components/FileInput";
 import PrimaryButton from "@/Components/PrimaryButton";
-import moment from "moment";
-import Select from "@/Components/Select";
 import {getSelectedPreDefinition, preDefinitions} from "@/Components/Reports/data/preDefinitions";
 
 export default function ReportForm({className, generateRoute, reportName}) {
@@ -23,7 +19,6 @@ export default function ReportForm({className, generateRoute, reportName}) {
 
     const setPreDefinition = (e) => {
         const idx = e.target.value;
-        console.log(idx, preDefinitions[idx]);
         setData({
             ...data,
             initial_date: preDefinitions[idx].initial_date,
