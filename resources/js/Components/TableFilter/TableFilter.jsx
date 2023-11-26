@@ -146,8 +146,6 @@ function TableFilter({request, inputs, routeName, buttonClassName = "", mappers 
                                                 <InputLabel htmlFor={key} value={inputs[key].label}/>
 
                                                 {inputs[key].render(data[key], (e) => {
-                                                    console.log(e);
-                                                    console.log("setting " + key + " to ", e.target.value);
                                                     setData(key, e.target.value);
                                                 })}
 
