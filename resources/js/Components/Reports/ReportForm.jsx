@@ -7,8 +7,6 @@ import PrimaryButton from "@/Components/PrimaryButton";
 import {getSelectedPreDefinition, preDefinitions} from "@/Components/Reports/data/preDefinitions";
 
 export default function ReportForm({className, generateRoute, reportName}) {
-    const initialDateInput = useRef();
-    const finalDateInput = useRef();
 
     const {data, setData, errors, post, put, reset, processing, recentlySuccessful} = useForm(
         {
@@ -66,7 +64,6 @@ export default function ReportForm({className, generateRoute, reportName}) {
 
                     <TextInput
                         id="initial_date"
-                        ref={initialDateInput}
                         value={data.initial_date}
                         onChange={(e) => setData('initial_date', e.target.value)}
                         type="date"
@@ -81,7 +78,6 @@ export default function ReportForm({className, generateRoute, reportName}) {
 
                     <TextInput
                         id="final_date"
-                        ref={initialDateInput}
                         value={data.final_date}
                         onChange={(e) => setData('final_date', e.target.value)}
                         type="date"
