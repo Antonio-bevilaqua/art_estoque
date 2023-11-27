@@ -73,7 +73,7 @@ export default function SellingsList({auth, ...props}) {
                             </Link>
                         </TableFilter>
                     </div>
-                    <SellingsListTable sellings={props.sellings}/>
+                    <SellingsListTable sellings={props.sellings} request={props.request} />
                 </div>
             </div>
         </AuthenticatedLayout>

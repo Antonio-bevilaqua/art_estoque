@@ -33,6 +33,9 @@ function TableFilter({request, inputs, routeName, buttonClassName = "", mappers 
     const clearFilter = (key) => {
         let newData = {...request};
         newData[key] = "";
+        if (typeof newData.page !== "undefined") {
+            newData.page = 1;
+        }
         router.get(route(routeName), newData);
     };
 

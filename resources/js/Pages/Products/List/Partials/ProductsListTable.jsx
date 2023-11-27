@@ -10,11 +10,11 @@ import {useState} from "react";
 import Alert from "@/Components/Alert";
 import {router} from '@inertiajs/react'
 
-export default function ProductsListTable({products}) {
+export default function ProductsListTable({products, request}) {
     const [removingProduct, setRemovingProduct] = useState(null);
 
     function handlePageChange(page) {
-        window.location.href = route('products.list', {'page': page});
+        window.location.href = route('products.list', {...request, 'page': page});
     }
 
     return (

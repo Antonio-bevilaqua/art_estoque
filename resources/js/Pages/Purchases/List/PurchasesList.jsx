@@ -73,7 +73,7 @@ export default function PurchasesList({auth, ...props}) {
                             </Link>
                         </TableFilter>
                     </div>
-                    <PurchasesListTable purchases={props.purchases}/>
+                    <PurchasesListTable purchases={props.purchases} request={props.request} />
                 </div>
             </div>
         </AuthenticatedLayout>

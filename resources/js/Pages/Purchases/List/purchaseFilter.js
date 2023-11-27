@@ -31,10 +31,12 @@ export const purchaseFilter = {
     },
     'min_total_value': {
         label: "Valor Mínimo Total",
+        mask: currencyFormatter,
         type: "number",
     },
     'max_total_value': {
         label: "Valor Máximo Total",
+        mask: currencyFormatter,
         type: "number",
     },
 };

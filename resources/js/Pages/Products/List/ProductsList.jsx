@@ -68,7 +68,7 @@ export default function ProductsList({auth, ...props}) {
                             </Link>
                         </TableFilter>
                     </div>
-                    <ProductsListTable products={props.products}/>
+                    <ProductsListTable products={props.products} request={props.request} />
                 </div>
             </div>
         </AuthenticatedLayout>

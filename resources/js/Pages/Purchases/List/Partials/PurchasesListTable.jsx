@@ -11,11 +11,11 @@ import {router} from '@inertiajs/react'
 import ProductCard from "@/Components/Products/ProductCard";
 import {countProducts} from "@/utils/functions";
 
-export default function PurchasesListTable({purchases}) {
+export default function PurchasesListTable({purchases, request}) {
     const [removingPurchase, setRemovingPurchase] = useState(null);
 
     function handlePageChange(page) {
-        router.get(route('purchases.list', {'page': page}));
+        router.get(route('purchases.list', {...request, 'page': page}));
     }
 
     return (
